@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>api_capstone</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <!-- opening page -->
+    <section class="openingPage">
+      <h1>Are you okay?</h1>
+      <div>
+        <p>People can learn to manage stress and lead happier, healthier lives. Fill out our questionnaire to determine your level of overall satisfaction so that we can help you find some solutions to keep stress at bay.</p>
+        <p class="disclaimer">We are not medical experts and some of the advice given here may actually make your situations worse</p>
+      </div>
+    </section>
+
+    <!-- questionnaire -->
+    <section class="q">
+      <form>
+        <div class="together">
+        <div class="labels"><label for="fulfillment">Fulfillment</label></div>
+        <div class="ranges"><input id="fulfillment" name="fulfillment" type="range" min="1" max="10" step="1"></div>
+        </div>
+        <br>
+        <div class="together">
+        <div class="labels"><label for="motivation">Motivation</label></div>
+        <div class="ranges"><input id="motivation" name="motivation" type="range" min="1" max="10" step="1"></div>
+        </div>
+        <br>
+        <div class="together">
+        <div class="labels"><label for="patience">Patience</label></div>
+        <div class="ranges"><input id="patience" name="patience" type="range" min="1" max="10" step="1"></div>
+        </div>
+        <br>
+        <div class="together">
+        <div class="labels"><label for="peace">Peace</label></div>
+        <div class="ranges"><input id="peace" name="peace" type="range" min="1" max="10" step="1"></div>
+        </div>
+        <br>
+        <div class="together">
+        <div class="labels"><label for="relationships">Relationships</label></div>
+        <div class="ranges"><input id="relationships" name="relationships" type="range" min="1" max="10" step="1"></div>
+        </div>
+        <br>
+        <div class="together">
+        <div class="labels"><label for="gratitude">Gratitude</label></div>
+        <div class="ranges"><input id="gratitude" name="gratitude" type="range" min="1" max="10" step="1"></div>
+        </div>
+        <br>
+        <div class="together">
+        <div class="labels"><label for="empowerment">Empowerment</label></div>
+        <div class="ranges"><input id="empowerment" name="empowerment" type="range" min="1" max="10" step="1"></div>
+        </div>
+        <br>
+      </form>
+    </section>
+
+    <!-- low satisfaction -->
+    <section class="lowSat">
+      <p>You need help</p>
+        <!-- Display funny resources for severe dissatisfaction -->
+        <!-- Display restart -->
+    </section>
+
+    <!-- medium satisfaction -->
+    <section class="medSat">
+      <p>Here's some helpful suggestions</p>
+        <!-- Display funny/helpful resources for medium satisfaction -->
+        <!-- Display restart -->
+    </section>
+
+      <!-- high satisfaction -->
+      <section class="highSat">
+        <p>You're cool</p>
+          <!--Display a zen image -->
+          <!-- Display restart -->
+      </section>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="store.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

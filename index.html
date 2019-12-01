@@ -7,17 +7,21 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
+
+    <p>Levels = <span class="levelHere"></span></p>
+
     <!-- opening page -->
     <section class="openingPage">
       <h1>Are you okay?</h1>
       <div>
         <p>People can learn to manage stress and lead happier, healthier lives. Fill out our questionnaire to determine your level of overall satisfaction so that we can help you find some solutions to keep stress at bay.</p>
         <p class="disclaimer">We are not medical experts and some of the advice given here may actually make your situations worse</p>
+        <button class="open"></button>
       </div>
     </section>
 
     <!-- questionnaire -->
-    <section class="q">
+    <section class="q hidden">
       <form>
         <div class="together">
         <div class="labels"><label for="fulfillment">Fulfillment</label></div>
@@ -54,31 +58,35 @@
         <div class="ranges"><input id="empowerment" name="empowerment" type="range" min="1" max="10" step="1"></div>
         </div>
         <br>
+        <button class="submit">Submit</button>
       </form>
     </section>
 
     <!-- low satisfaction -->
-    <section class="lowSat">
+    <section class="lowSat hidden">
       <p>You need help</p>
         <!-- Display funny resources for severe dissatisfaction -->
         <!-- Display restart -->
     </section>
 
     <!-- medium satisfaction -->
-    <section class="medSat">
+    <section class="medSat hidden">
       <p>Here's some helpful suggestions</p>
         <!-- Display funny/helpful resources for medium satisfaction -->
         <!-- Display restart -->
     </section>
 
       <!-- high satisfaction -->
-      <section class="highSat">
+      <section class="highSat hidden">
         <p>You're cool</p>
           <!--Display a zen image -->
           <!-- Display restart -->
       </section>
 
-
+    <!-- append suggestions here -->
+      <section class="suggestions hidden">
+        <span></span>
+      </section>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="store.js"></script>

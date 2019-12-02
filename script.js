@@ -22,8 +22,8 @@ function getTotalPoints() {
 
 
 //determine stress level
-const points = getTotalPoints();
 function levels() {
+  const points = getTotalPoints();
     if(`${getTotalPoints()}` < 39){
         $('.lowSat').toggleClass('hidden');
     }
@@ -44,9 +44,18 @@ $('.open').click(function(){
 //click event on FORM submit
 $('form').on('click', '.submit', function(){
   event.preventDefault();
-    $('.q').hide();
+    $('.q').toggleClass('hidden');
     console.log("this thing submitted")
     levels();
+})
+
+//click event on BACK submit
+$('.result').on('click', '.back', function(event){
+  event.preventDefault();
+    // $(this).prev('.result').toggleClass('hidden'); //why isn't this line working??
+     $(this).closest('.result').toggleClass('hidden');
+    $('.q').toggleClass('hidden');
+    console.log("back button clicked");
 })
 
 //document.ready()

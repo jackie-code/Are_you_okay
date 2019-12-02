@@ -1,6 +1,6 @@
 'use strict';
 
-let levelpoints = `${getTotalPoints()}`;
+//let levelpoints = `${getTotalPoints()}`;
 
 //listen for inputs
   $('input[type=range]').on('input', (e) => {
@@ -22,6 +22,7 @@ function getTotalPoints() {
 
 
 //determine stress level
+const points = getTotalPoints();
 function levels() {
     if(`${getTotalPoints()}` < 39){
         $('.lowSat').toggleClass('hidden');

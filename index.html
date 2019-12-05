@@ -9,13 +9,14 @@
   <body>
 
     <p>Levels = <span class="levelHere"></span></p>
+    <p id="js-error-message" class="error-message"></p>
 
     <!-- opening page -->
     <section class="openingPage">
       <h1>Are you okay?</h1>
       <div>
         <p>People can learn to manage stress and lead happier, healthier lives. Fill out our questionnaire to determine your level of overall satisfaction so that we can help you find some solutions to keep stress at bay.</p>
-        <p class="disclaimer">We are not medical experts and some of the advice given here may actually make your situations worse</p>
+        <p class="disclaimer">We are not medical experts and some of the advice given here may actually make your situation worse</p>
         <button class="open">I understand</button>
       </div>
     </section>
@@ -67,17 +68,40 @@
       <p>You need help</p>
       <button class="back">Readjust Levels</button>
       <br>
+
       <div class="suggestions">
         <h2>Suggestions</h2>
-        <h3>Cocktails</h3>
-        <p class='cocktails'></p>
-        <h3>Destruction Therapy</h3>
-        <p class='destroy'></p>
-        <h3>Time until next holiday</h3>
-        <p class='holiday'></p>
-        <h3>Evil Insult Generator</h3>
-        <p class="insults"></p>
+
+            <div id="drinks">
+            <h3>Cocktails</h3>
+            <ul class='cocktails'></ul>
+                <form id="drink-form">
+                  <label for="drink-search">favorite drink</label>
+                  <input type="text" name="search-term" id="drink-search" required>
+                  <br>
+                  <button class="drinkClick">Get Drinks</button>
+                </form>
+            </div>
+
+            <div>
+              <h3>Destruction Therapy</h3>
+              <p class='destroy'></p>
+            </div>
+
+            <div>
+              <h3>Time until next holiday</h3>
+              <p class='holiday'></p>
+            </div>
+
+            <div>
+              <h3>Evil Insult Generator</h3>
+              <p class="insults"></p>
+            </div>
       </div>
+      <ul class="appendDrink"><ul>
+      <p class="appendDestroy"></p>
+      <p class="appendHoliday"></p>
+      <p class="appendInsults"></p>
         <!-- Display funny resources for severe dissatisfaction -->
         <!-- Display restart -->
     </section>

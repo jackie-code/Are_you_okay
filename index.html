@@ -85,22 +85,32 @@
 
             <div>
               <h3>Destruction Therapy</h3>
+              <ul>
+                <form id="destroy-form">
+                  <label for="destroy-search">Find a local rage room near you</label>
+                  <input type="text" name="search-term" id="destroy-search" required>
+                  <br>
+                  <button class="drinkClick">Break stuff</button>
+                </form>
+              </ul>
               <p class='destroy'></p>
             </div>
 
             <div>
               <h3>Time until next holiday</h3>
               <p class='holiday'></p>
+              <button class="holidayClick" id="holidayClickButton">How much longer?</button>
             </div>
 
             <div>
               <h3>Evil Insult Generator</h3>
               <p class="insults"></p>
+              <button class="insults" id="insultClickButton">Communicate your emotions in a healthy way</button>
             </div>
       </div>
       <ul class="appendDrink"><ul>
       <p class="appendDestroy"></p>
-      <p class="appendHoliday"></p>
+      <p class="appendHoliday">There are more holidays than there are days in a year, so plenty of reasons to take a break right here:<br><br></p>
       <p class="appendInsults"></p>
         <!-- Display funny resources for severe dissatisfaction -->
         <!-- Display restart -->
@@ -146,5 +156,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="store.js"></script>
     <script src="script.js"></script>
+    <script src="cocktail.js"></script>
+    <script src="map.js"></script>
+    <script src="holidays.js"></script>
   </body>
 </html>

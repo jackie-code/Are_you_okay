@@ -50,6 +50,8 @@ $('form').on('click', '.submit', function(){
     levels();
 })
 
+
+
 //click event on BACK submit
 $('.result').on('click', '.back', function(event){
   event.preventDefault();
@@ -60,9 +62,29 @@ $('.result').on('click', '.back', function(event){
 })
 
 //document.ready()
-$('document').ready(function startPage(){
+$(document).ready(function() {
+  //clear out DOM in results area
+  $("#insultClickButton").on("click", function() {
+    console.log("insult button clicked");
+    $(".appendDrink").html("");
+    $(".appendHoliday").html("");
+  });
 
+  $(".drinkClick").on("click", function() {
+        console.log("drink button clicked");
+    $(".appendInsults").html("");
+    $(".appendHoliday").html("");
+  });
+
+  $(".holidayClick").on("click", function() {
+        console.log("holiday button clicked");
+    $(".appendDrink").html("");
+    $(".appendInsults").html("");
+  });
 })
+
+
+
 
 
 

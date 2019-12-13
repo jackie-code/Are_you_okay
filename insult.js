@@ -1,10 +1,13 @@
 const INSULT_URL = "https://evilinsult.com/generate_insult.php?lang=en&type=json";
+//this api doesn't come with cors so we added cors-anywhere 
+//This API enables cross-origin requests to anywhere 
 const CORS_ANYWHERE_URL = "https://cors-anywhere.herokuapp.com/";
 
-function fetchData(url) {
+function fetchTheData(url) {
   fetch(url)
   .then((resp) => resp.json())
   .then(function (data) {
+    //this is the correct scope to console.log data as a json object
     console.log("insultDataJson:", data);
     displayInsults(data);
   })
@@ -24,7 +27,7 @@ function displayInsults(data){
 
 function onInsultButtonClick(event) {
         event.preventDefault();
-        fetchData(CORS_ANYWHERE_URL + INSULT_URL);
+        fetchTheData(CORS_ANYWHERE_URL + INSULT_URL);
       }
 $('#insultClickButton').click(onInsultButtonClick);
 

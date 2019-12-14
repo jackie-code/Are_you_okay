@@ -1,149 +1,166 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>api_capstone</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-  </head>
-  <body>
 
-    <p>Levels = <span class="levelHere"></span></p>
-    <p id="js-error-message" class="error-message"></p>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>api_capstone</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
 
-    <!-- opening page -->
-    <section class="openingPage">
-      <h1>Are you okay?</h1>
-      <div>
-        <p>People can learn to manage stress and lead happier, healthier lives. Fill out our very scientific questionnaire that incorporates Maslow's Hierarchy of Needs to determine your level of overall satisfaction so that we can help you find some solutions to keep stress at bay.</p>
-        <p class="disclaimer">We are not medical experts and some of the advice given here may actually make your situation worse and cause liver failure</p>
-        <button class="open">I understand</button>
-      </div>
-    </section>
+<body>
 
-    <!-- questionnaire -->
-    <section id="sliderScience" class="q hidden">
-      <div id="science"><h2>Science Sliders</h2></div>
-      <form>
-        <div class="together">
+  <p>Levels = <span class="levelHere"></span></p>
+  <p id="js-error-message" class="error-message"></p>
+
+  <!-- opening page -->
+  <section class="openingPage">
+    <h1>Are you okay?</h1>
+    <div>
+      <p>People can learn to manage stress and lead happier, healthier lives. Fill out our very scientific questionnaire
+        that incorporates Maslow's Hierarchy of Needs to determine your level of overall satisfaction so that we can
+        help you find some solutions to keep stress at bay.</p>
+      <p class="disclaimer">We are not medical experts and some of the advice given here may actually make your
+        situation worse and cause liver failure</p>
+      <button class="open">I understand</button>
+    </div>
+  </section>
+
+  <!-- questionnaire -->
+  <section id="sliderScience" class="q hidden">
+    <div id="science">
+      <h2>Science Sliders</h2>
+    </div>
+    <form>
+      <div class="together">
         <div class="labels"><label for="fulfillment">Fulfillment</label></div>
         <div class="ranges"><input id="fulfillment" name="fulfillment" type="range" min="1" max="10" step="1"></div>
-        </div>
-        <br>
-        <div class="together">
+      </div>
+      <br>
+      <div class="together">
         <div class="labels"><label for="motivation">Motivation</label></div>
         <div class="ranges"><input id="motivation" name="motivation" type="range" min="1" max="10" step="1"></div>
-        </div>
-        <br>
-        <div class="together">
+      </div>
+      <br>
+      <div class="together">
         <div class="labels"><label for="patience">Patience</label></div>
         <div class="ranges"><input id="patience" name="patience" type="range" min="1" max="10" step="1"></div>
-        </div>
-        <br>
-        <div class="together">
+      </div>
+      <br>
+      <div class="together">
         <div class="labels"><label for="peace">Peace</label></div>
         <div class="ranges"><input id="peace" name="peace" type="range" min="1" max="10" step="1"></div>
-        </div>
-        <br>
-        <div class="together">
+      </div>
+      <br>
+      <div class="together">
         <div class="labels"><label for="relationships">Relationships</label></div>
         <div class="ranges"><input id="relationships" name="relationships" type="range" min="1" max="10" step="1"></div>
-        </div>
-        <br>
-        <div class="together">
+      </div>
+      <br>
+      <div class="together">
         <div class="labels"><label for="gratitude">Gratitude</label></div>
         <div class="ranges"><input id="gratitude" name="gratitude" type="range" min="1" max="10" step="1"></div>
-        </div>
-        <br>
-        <div class="together">
+      </div>
+      <br>
+      <div class="together">
         <div class="labels"><label for="empowerment">Empowerment</label></div>
         <div class="ranges"><input id="empowerment" name="empowerment" type="range" min="1" max="10" step="1"></div>
-        </div>
-        <br>
-        <button class="submit">Submit</button>
-      </form>
-    </section>
+      </div>
+      <br>
+      <button class="submit">Submit</button>
+    </form>
+  </section>
 
-    <!-- low satisfaction -->
-    <section class="result lowSat hidden">
-      <div id="lowTitle">
+  <!-- low satisfaction -->
+  <section class="result lowSat hidden">
+    <div id="lowTitle">
       <p id="help">You need help</p>
       <button class="back">Readjust Levels</button>
       <br>
+    </div>
+    <div class="suggestions">
+      <h2>Suggestions</h2>
+
+      <div id="drinks">
+        <h3>Cocktails</h3>
+        <ul class='cocktails'></ul>
+        <form id="drink-form">
+          <label for="drink-search">Create your favorite drink now.</label>
+          <p class="disclaimer">Type in desired drink</p>
+          <input type="text" name="search-term" id="drink-search" required>
+          <br>
+          <button class="drinkClick">Get Drinks</button>
+        </form>
       </div>
-      <div class="suggestions">
-        <h2>Suggestions</h2>
-
-            <div id="drinks">
-            <h3>Cocktails</h3>
-            <ul class='cocktails'></ul>
-                <form id="drink-form">
-                  <label for="drink-search">Create your favorite drink now.</label>
-                  <p class="disclaimer">Type in desired drink</p>
-                  <input type="text" name="search-term" id="drink-search" required>
-                  <br>
-                  <button class="drinkClick">Get Drinks</button>
-                </form>
-            </div>
 
 
-            <div>
-              <h3>Time until next holiday</h3>
-              <p class="disclaimer">There are more holidays than there are days in the year, so click here to find plenty of excuses to take the day off of whatever obligations and responsibilities that burden you</p>
-              <p class='holiday'></p>
-              <button class="holidayClick" id="holidayClickButton">How much longer?</button>
-            </div>
-
-            <div>
-              <h3>Evil Insult Generator</h3>
-              <p class="insults"></p>
-              <p class="disclaimer">Communicate your emotions in a healthy way</p>
-              <button id="insultClickButton">Find your inner voice</button>
-            </div>
+      <div>
+        <h3>Time until next holiday</h3>
+        <p class="disclaimer">There are more holidays than there are days in the year, so click here to find plenty of
+          excuses to take the day off of whatever obligations and responsibilities that burden you</p>
+        <p class='holiday'></p>
+        <button class="holidayClick" id="holidayClickButton">How much longer?</button>
       </div>
-      
-      <div class="copeResults"><ul class="appendDrink"><ul></div>
-      <div class="copeResults"><p class="appendDestroy"></p></div>
-      <div class="copeResults"><p class="appendHoliday"></p></div>
-      <div class="copeResults"><p class="appendInsults"></p></div>
-        <!-- Display funny resources for severe dissatisfaction -->
-        <!-- Display restart -->
-    </section>
-    
-    <!-- medium satisfaction -->
-    <section class="result medSat hidden">
-      <div id="lowTitle">
+
+      <div>
+        <h3>Evil Insult Generator</h3>
+        <p class="insults"></p>
+        <p class="disclaimer">Communicate your emotions in a healthy way</p>
+        <button id="insultClickButton">Find your inner voice</button>
+      </div>
+    </div>
+
+    <div class="copeResults">
+      <ul class="appendDrink">
+        <ul>
+    </div>
+    <div class="copeResults">
+      <p class="appendDestroy"></p>
+    </div>
+    <div class="copeResults">
+      <p class="appendHoliday"></p>
+    </div>
+    <div class="copeResults">
+      <p class="appendInsults"></p>
+    </div>
+    <!-- Display funny resources for severe dissatisfaction -->
+    <!-- Display restart -->
+  </section>
+
+  <!-- medium satisfaction -->
+  <section class="result medSat hidden">
+    <div id="lowTitle">
       <p>Here's some helpful suggestions</p>
       <button class="back">Readjust Levels</button>
-      </div>
-      <div class="suggestions">
-        <h2>Suggestions</h2>
-         <p>Go to the gym</p>
-         <p>Learn something new</p>
-         <p>Take a friend shopping or out to eat</p>
-      </div>
-        <!-- Display funny/helpful resources for medium satisfaction -->
-        <!-- Display restart -->
-    </section>
+    </div>
+    <div class="suggestions">
+      <h2>Suggestions</h2>
+      <p>Go to the gym</p>
+      <p>Learn something new</p>
+      <p>Take a friend shopping or out to eat</p>
+    </div>
+    <!-- Display funny/helpful resources for medium satisfaction -->
+    <!-- Display restart -->
+  </section>
 
-      <!-- high satisfaction -->
-      <section class="result highSat hidden">
-        <div id="lowTitle">
-        <p>You're cool</p>
-        <button class="back">Readjust Levels</button>
-        </div>
-      <div class="suggestions">
-<!--Display a zen image -->
-<p>zen image going here</p>
-      </div>
-      </section>
+  <!-- high satisfaction -->
+  <section class="result highSat hidden">
+    <div id="lowTitle">
+      <p>You're cool</p>
+      <button class="back">Readjust Levels</button>
+    </div>
+    <div class="suggestions">
+      <!--Display a zen image -->
+      <p>zen image going here</p>
+    </div>
+  </section>
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="script.js"></script>
-    <script src="cocktail.js"></script>
-    <script src="holidays.js"></script>
-    <script src="insult.js"></script>
-  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="script.js"></script>
+  <script src="cocktail.js"></script>
+  <script src="holidays.js"></script>
+  <script src="insult.js"></script>
+</body>
+
 </html>
-

@@ -1,58 +1,163 @@
+* {
+  box-sizing: border-box;
+}
+
+
+@media only screen and (min-width : 320px) {
 .openingPage {
-  background-color: gainsboro;
-  padding: 15px;
-}
-
+    background-color: gainsboro;
+    padding: 15px;
+  }
+  
 .disclaimer {
-font-size: 11px;
+  font-size: 11px;
 }
+  
+  .openingPage h1{
+  text-align: center;
+  }
+  
+  .q {
+    background-color:aliceblue;
+    width: 250px;
+    padding: 15px;
+    border: 3px solid black;
+  }
+  
+  .together {
+   display: flex;
+   justify-content: space-between;
+  }
+  
+  .lowSat {
+    padding: 15px;
+    background-color: rgb(198, 198, 199);
+  }
 
-.openingPage h1{
-text-align: center;
-}
+  .medSat {
+    padding: 15px;
+    background-color: rgb(170, 170, 170);
+  }
 
-.q {
-  background-color:aliceblue;
-  width: 250px;
+  .highSat {
+    padding: 15px;
+    background-color: rgb(218, 218, 218);
+  }
+
+  #js-error-message {
+    color: red;
+  }
+
+.openingPage {
+  background-color: rgb(232, 236, 236);
   padding: 15px;
-  border: 3px solid black;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 280px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.together {
- display: flex;
- justify-content: space-between;
-}
-
-.lowSat {
+  .suggestions {
+  background-color: rgb(232, 236, 236);
   padding: 15px;
-  background-color: rgb(198, 198, 199);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 280px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.medSat {
-  padding: 15px;
-  background-color: rgb(170, 170, 170);
+.copeResults {
+  background-color: rgb(139, 139, 139);
+  width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  text-align: center;
 }
 
-.highSat {
-  padding: 15px;
-  background-color: rgb(218, 218, 218);
+#lowTitle {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+.back {
+  width: 120px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#help {
+  font-size: 30px;
+}
+
+#science {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+}
+
+
+
+/* ********************Medium Screen*********************** */
+@media only screen and (min-width: 750px)  {
+
+  .openingPage {
+    width: 700px;
+  }
+
+  .suggestions {
+  width: 700px;
+}
+
+  .copeResults {
+  width: 700px;
+}
+
+#help {
+  font-size: 30px;
+}
+
+}
+
+
+
+/* ********************Large Screen*********************** */
+
+@media only screen and (min-width: 1200px) {
+
+  .openingPage {
+   width: 1000px;
+  }
+
+  .suggestions {
+  width: 1000px;
+}
+
+  .copeResults {
+  width: 1000px;
+}
+
+#help {
+  font-size: 30px;
+}
+
+}
+
+
+/* ********************** */
 
 .hidden {
-    display: none;
-}
-
-#js-error-message {
-  color: red;
-}
-
-/* cocktails */
-.suggestions {
-background-color: aqua;
-display: flex;
-flex-direction: column;
-text-align: center;
-width: 300px;
-margin-left: auto;
-margin-right: auto;
-}
+      display: none;
+  }

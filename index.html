@@ -15,14 +15,15 @@
     <section class="openingPage">
       <h1>Are you okay?</h1>
       <div>
-        <p>People can learn to manage stress and lead happier, healthier lives. Fill out our questionnaire to determine your level of overall satisfaction so that we can help you find some solutions to keep stress at bay.</p>
-        <p class="disclaimer">We are not medical experts and some of the advice given here may actually make your situation worse</p>
+        <p>People can learn to manage stress and lead happier, healthier lives. Fill out our very scientific questionnaire that incorporates Maslow's Hierarchy of Needs to determine your level of overall satisfaction so that we can help you find some solutions to keep stress at bay.</p>
+        <p class="disclaimer">We are not medical experts and some of the advice given here may actually make your situation worse and cause liver failure</p>
         <button class="open">I understand</button>
       </div>
     </section>
 
     <!-- questionnaire -->
     <section class="q hidden">
+      <div id="science"><h2>Science Sliders</h2></div>
       <form>
         <div class="together">
         <div class="labels"><label for="fulfillment">Fulfillment</label></div>
@@ -65,10 +66,11 @@
 
     <!-- low satisfaction -->
     <section class="result lowSat hidden">
-      <p>You need help</p>
+      <div id="lowTitle">
+      <p id="help">You need help</p>
       <button class="back">Readjust Levels</button>
       <br>
-
+      </div>
       <div class="suggestions">
         <h2>Suggestions</h2>
 
@@ -76,28 +78,18 @@
             <h3>Cocktails</h3>
             <ul class='cocktails'></ul>
                 <form id="drink-form">
-                  <label for="drink-search">favorite drink</label>
+                  <label for="drink-search">Create your favorite drink now.</label>
+                  <p class="disclaimer">Type in desired drink</p>
                   <input type="text" name="search-term" id="drink-search" required>
                   <br>
                   <button class="drinkClick">Get Drinks</button>
                 </form>
             </div>
 
-            <div>
-              <h3>Destruction Therapy</h3>
-              <ul>
-                <form id="destroy-form">
-                  <label for="destroy-search">Find a local rage room near you</label>
-                  <input type="text" name="search-term" id="destroy-search" required>
-                  <br>
-                  <button class="drinkClick">Break stuff</button>
-                </form>
-              </ul>
-              <p class='destroy'></p>
-            </div>
 
             <div>
               <h3>Time until next holiday</h3>
+              <p class="disclaimer">There are more holidays than there are days in the year, so click here to find plenty of excuses to take the day off of whatever obligations and responsibilities that burden you</p>
               <p class='holiday'></p>
               <button class="holidayClick" id="holidayClickButton">How much longer?</button>
             </div>
@@ -105,22 +97,25 @@
             <div>
               <h3>Evil Insult Generator</h3>
               <p class="insults"></p>
-              <button class="insults" id="insultClickButton">Communicate your emotions in a healthy way</button>
+              <p class="disclaimer">Communicate your emotions in a healthy way</p>
+              <button id="insultClickButton">Find your inner voice</button>
             </div>
       </div>
-      <ul class="appendDrink"><ul>
-      <p class="appendDestroy"></p>
-      <p class="appendHoliday">There are more holidays than there are days in a year, so plenty of reasons to take a break right here:<br><br></p>
-      <p class="appendInsults"></p>
+      
+      <div class="copeResults"><ul class="appendDrink"><ul></div>
+      <div class="copeResults"><p class="appendDestroy"></p></div>
+      <div class="copeResults"><p class="appendHoliday"></p></div>
+      <div class="copeResults"><p class="appendInsults"></p></div>
         <!-- Display funny resources for severe dissatisfaction -->
         <!-- Display restart -->
     </section>
     
     <!-- medium satisfaction -->
     <section class="result medSat hidden">
+      <div id="lowTitle">
       <p>Here's some helpful suggestions</p>
       <button class="back">Readjust Levels</button>
-      <br>
+      </div>
       <div class="suggestions">
         <h2>Suggestions</h2>
         <h3>Good Reads</h3>
@@ -138,9 +133,10 @@
 
       <!-- high satisfaction -->
       <section class="result highSat hidden">
+        <div id="lowTitle">
         <p>You're cool</p>
         <button class="back">Readjust Levels</button>
-        <br>
+        </div>
       <div class="suggestions">
         <h2>Suggestions</h2>
         <h3>cocktails</h3>
@@ -154,11 +150,10 @@
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="store.js"></script>
     <script src="script.js"></script>
     <script src="cocktail.js"></script>
-    <script src="map.js"></script>
     <script src="holidays.js"></script>
     <script src="insult.js"></script>
   </body>
 </html>
+

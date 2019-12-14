@@ -25,7 +25,7 @@ function getTotalPoints() {
 //determine stress level
 function levels() {
   const points = getTotalPoints();
-    if(`${getTotalPoints()}` < 39){
+    if(`${getTotalPoints()}` < 25){
         $('.lowSat').toggleClass('hidden');
     }
     else if(`${getTotalPoints()}` >= 40 && `${getTotalPoints()}` <= 50){

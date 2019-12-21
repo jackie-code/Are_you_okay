@@ -16,36 +16,53 @@ function getTotalPoints() {
   let points = 0;
   let ranges = $('.ranges input');
   for (let i = 0; i < ranges.length; i++) {
+    // Number() converts data type to a number type
     points += Number(ranges[i].value);
   }
   return parseInt(points);
+  moodImage() 
 }
 
 
 //determine stress level
+// these are the three window options the sliders lead to...
 function levels() {
   const points = getTotalPoints();
   if (`${getTotalPoints()}` < 25) {
+    // $('#levelP').css("color", "red");
     $('.lowSat').toggleClass('hidden');
-  } else if (`${getTotalPoints()}` >= 40 && `${getTotalPoints()}` <= 50) {
+  } else if (`${getTotalPoints()}` >= 26 && `${getTotalPoints()}` <= 50) {
     $('.medSat').toggleClass('hidden');
+    // $('#levelP').css("color", "orange");
   } else {
     $('.highSat').toggleClass('hidden')
+    // $('#levelP').css("color", "green");
   }
 }
 
-//click event on OPEN 
+$('.ranges').click(function(){
+  if (`${getTotalPoints()}` < 25) {
+    $('#levelP').css("color", "red");
+  } else if (`${getTotalPoints()}` >= 26 && `${getTotalPoints()}` <= 50) {
+    $('#levelP').css("color", "orange");
+  } else if (`${getTotalPoints()}` >= 51) {
+    $('#levelP').css("color", "green");
+  }
+})
+
+//click event on page with instructions
 $('.open').click(function () {
   $('.openingPage').toggleClass('hidden');
-  console.log("something happened");
+  console.log("you clicked I understand");
   $('.q').toggleClass('hidden');
 })
 
 //click event on FORM submit
+// class of .q is the slider section
 $('form').on('click', '.submit', function () {
   event.preventDefault();
   $('.q').toggleClass('hidden');
-  console.log("this thing submitted")
+  console.log("this form submitted")
   levels();
 })
 
@@ -54,9 +71,8 @@ $('form').on('click', '.submit', function () {
 //click event on BACK submit
 $('.result').on('click', '.back', function (event) {
   event.preventDefault();
-  // $(this).prev('.result').toggleClass('hidden'); //why isn't this line working??
   $(this).closest('.result').toggleClass('hidden');
-  $('.q').toggleClass('hidden');
+  $('.q').toggleClass('hidden'); //un-hides sliders
   console.log("back button clicked");
 })
 

@@ -19,6 +19,7 @@ function fetchTheData(url) {
 
 function displayInsults(data) {
     let insult = data.insult;
+    $('.appendInsults').empty(); // allows only one insult at a time per click
     $('.appendInsults').append(
         `<p>${insult}</p>`
     )

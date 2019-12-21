@@ -2,10 +2,31 @@
   box-sizing: border-box;
 }
 
+html {
+  background-color: #E8DAB3;
+}
+
+.result {
+  background-color: #FFDAC4;
+}
+
+#quack {
+border-radius: 50%;
+border: 10px solid #FFDAC4;
+}
+
+#okPage {
+  display: flex;
+  justify-content: space-between;
+}
+
+form {
+  z-index: 1;
+}
 
 @media only screen and (min-width : 320px) {
 .openingPage {
-    background-color: gainsboro;
+    background-color: #FFEED0;
     padding: 15px;
   }
   
@@ -15,13 +36,16 @@
   
   .openingPage h1{
   text-align: center;
+  
   }
   
   .q {
-    background-color:aliceblue;
+    background-color:#FFEED0;
     width: 250px;
     padding: 15px;
     border: 3px solid black;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   .together {
@@ -31,25 +55,23 @@
   
   .lowSat {
     padding: 15px;
-    background-color: rgb(198, 198, 199);
   }
 
   .medSat {
     padding: 15px;
-    background-color: rgb(170, 170, 170);
   }
 
   .highSat {
     padding: 15px;
-    background-color: rgb(218, 218, 218);
+    background-color: #FFDAC4;
   }
 
   #js-error-message {
-    color: red;
+    color: #E8CEB3;
   }
 
 .openingPage {
-  background-color: rgb(232, 236, 236);
+  background-color: #FFEED0;;
   padding: 15px;
   display: flex;
   flex-direction: column;
@@ -60,7 +82,7 @@
 }
 
   .suggestions {
-  background-color: rgb(232, 236, 236);
+    background-color: #FFEED0;
   padding: 15px;
   display: flex;
   flex-direction: column;
@@ -71,7 +93,7 @@
 }
 
 .copeResults {
-  background-color: rgb(139, 139, 139);
+  background-color: #FFEED0;
   width: 280px;
   margin-left: auto;
   margin-right: auto;

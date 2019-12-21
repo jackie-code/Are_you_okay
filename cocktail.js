@@ -41,7 +41,7 @@ function getDrinks(query) {
           )
         }
       }
-
+      $('.appendDrink').empty(); //this makes only one result append at a time and refreshes drink on each click
       //add item to the results 
       $('.appendDrink').append(
         `<li>

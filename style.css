@@ -156,7 +156,7 @@ button {
   text-align: center;
 }
 
-#lowTitle {
+.lowTitle {
   display: flex;
   flex-direction: column;
   text-align: center;

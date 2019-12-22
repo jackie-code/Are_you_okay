@@ -26,4 +26,6 @@ create a list of upcoming holidays
 
 ## Screenshots
 
+Inline-style:
 ![alt text]( https://github.com/jackie-code/api_hack_capstone/tree/master/images/whole400.jpg "all windows")
+

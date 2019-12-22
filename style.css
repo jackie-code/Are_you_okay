@@ -14,6 +14,11 @@ html {
   font-size: 2rem;
 }
 
+#quack {
+  border-radius: 50%;
+  border: 10px solid #FFDAC4; 
+}
+
 #okPage {
   display: flex;
   justify-content: space-between;

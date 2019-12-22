@@ -28,6 +28,6 @@ create a list of upcoming holidays
 
 ![alt text](images/whole400.jpg)
 
-## Click here to try yourself
+## Click the link here to try yourself
 [Click here](https://jackie-code.github.io/api_hack_capstone/)
 

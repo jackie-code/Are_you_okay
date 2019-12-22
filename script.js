@@ -29,17 +29,15 @@ function getTotalPoints() {
 function levels() {
   const points = getTotalPoints();
   if (`${getTotalPoints()}` < 25) {
-    // $('#levelP').css("color", "red");
     $('.lowSat').toggleClass('hidden');
   } else if (`${getTotalPoints()}` >= 26 && `${getTotalPoints()}` <= 50) {
     $('.medSat').toggleClass('hidden');
-    // $('#levelP').css("color", "orange");
   } else {
     $('.highSat').toggleClass('hidden')
-    // $('#levelP').css("color", "green");
   }
 }
 
+// this code makes the colors of the level change depending on the sliders
 $('.ranges').click(function(){
   if (`${getTotalPoints()}` < 25) {
     $('#levelP').css("color", "red");

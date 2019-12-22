@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width">
   <title>api_capstone</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cinzel|Tajawal&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -16,18 +18,17 @@
   <!-- opening page -->
   <section class="openingPage">
     <div id="okPage">
-    <p>Fixing Lives with Maturity</p>
-    <img src="images/quack1.jpg" alt="duck doctor logo">
+    <p class="disclaimer">Fixing Lives with Care and Maturity</p>
     </div>
     <h1>Are you okay?</h1>
     <div>
       <p>People can learn to manage stress and lead happier, healthier lives. Fill out our very scientific questionnaire
         that incorporates Maslow's Hierarchy of Needs to determine your level of overall satisfaction so that we can
         help you find some solutions to keep stress at bay.</p>
-        <img id="quack" src="images/quackdoc.jpg" alt="quack doctor">
+        <img id="quack" src="images/jp1.png" alt="quack doctor">
       <p class="disclaimer">We are not medical experts and some of the advice given here may actually make your
         situation worse and cause liver failure</p>
-      <button class="open">I understand</button>
+      <button class="open"><img src="images/understand80.png" alt="purple circle with the words I understand"></button>
     </div>
   </section>
 
@@ -82,11 +83,12 @@
   <!-- low satisfaction -->
   <section class="result lowSat hidden">
     <div id="lowTitle">
-      <p id="help">You need help</p>
+      <p id="deal"><span id="help">You need help</span> Deal with it</p>
       <button class="back">Readjust Levels</button>
       <br>
+      <br>
     </div>
-    <div class="suggestions">
+    <div class="suggestions weak">
       <h2>Suggestions</h2>
 
       <div id="drinks">
@@ -97,7 +99,8 @@
           <p class="disclaimer">Type in desired drink</p>
           <input type="text" name="search-term" id="drink-search" required>
           <br>
-          <button class="drinkClick">Get Drinks</button>
+          <br>
+          <button class="drinkClick"><img src="images/drink40.jpg" alt="drink icon"> </button>
         </form>
       </div>
 
@@ -107,14 +110,14 @@
         <p class="disclaimer">There are more holidays than there are days in the year, so click here to find plenty of
           excuses to take the day off of whatever obligations and responsibilities that burden you</p>
         <p class='holiday'></p>
-        <button class="holidayClick" id="holidayClickButton">How much longer?</button>
+        <button class="holidayClick" id="holidayClickButton"><img src="images/calandar40.jpg" alt="calandar icon"> </button>
       </div>
 
       <div>
         <h3>Evil Insult Generator</h3>
         <p class="insults"></p>
-        <p class="disclaimer">Communicate your emotions in a healthy way</p>
-        <button id="insultClickButton">Find your inner voice</button>
+        <p class="disclaimer">Find your inner voice</p>
+        <button id="insultClickButton"><img src="images/demon40.png" alt="demon icon"></button>
       </div>
     </div>
 
@@ -146,7 +149,9 @@
       <p>Go to the gym</p>
       <p>Learn something new</p>
       <p>Take a friend shopping or out to eat</p>
+      <div id="readingImg"><img class="book" src="images/book.jpg" alt="reading a book"></div>
     </div>
+    
     <!-- Display funny/helpful resources for medium satisfaction -->
     <!-- Display restart -->
   </section>
@@ -154,12 +159,12 @@
   <!-- high satisfaction -->
   <section class="result highSat hidden">
     <div id="lowTitle">
-      <p>You're cool</p>
+      <p id="cool">You're almost Gandalf level cool</p>
       <button class="back">Readjust Levels</button>
     </div>
     <div class="suggestions">
       <!--Display a zen image -->
-      <p>zen image going here</p>
+      <img class="gandalf" src="images/gandalf.jpg" alt="gandalf playing electric guitar">
     </div>
   </section>
 

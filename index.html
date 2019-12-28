@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Are You Okay?</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="button.css" rel="stylesheet" type="text/css" />
   <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Cinzel&#124;ajawal&display=swap" rel="stylesheet">
 </head>
@@ -18,17 +19,19 @@
   <!-- opening page -->
   <section class="openingPage">
     <div id="okPage">
-    <p class="disclaimer">Fixing Lives with Care and Maturity</p>
+      <p class="disclaimer">Fixing Lives with Care and Maturity</p>
     </div>
     <h1>Are you okay?</h1>
     <div>
-      <p>People can learn to manage stress and lead happier, healthier lives. Fill out our very scientific questionnaire
+      <p id="manage">People can learn to manage stress and lead happier, healthier lives. Fill out our very scientific
+        questionnaire
         that incorporates Maslow's Hierarchy of Needs to determine your level of overall satisfaction so that we can
         help you find some solutions to keep stress at bay.</p>
-        <img id="quack" src="images/jp1.png" alt="quack doctor">
+      <img id="quack" src="images/jp1.png" alt="quack doctor">
       <p class="disclaimer">We are not medical experts and some of the advice given here may actually make your
         situation worse and cause liver failure</p>
-      <button class="open"><img src="images/understand80.png" alt="purple circle with the words I understand"></button>
+      <img id="yogi" src="images/yogi.png" alt="yoga icon">
+      <button id="undbtn" class="open boton">Understood</button>
     </div>
   </section>
 
@@ -76,7 +79,7 @@
       <button class="submit">Submit</button>
     </form>
     <div id="scatter">
-      
+
     </div>
   </section>
 
@@ -90,6 +93,9 @@
     </div>
     <div class="suggestions weak">
       <h2>Suggestions</h2>
+      <p><b>This is a sign from the universe that you have the right to throw a tantrum (within legal reason) because
+          life is hard. Type in your desired drink, give yourself an excuse to take a holiday, and open up your
+          vishuddha chakra.</b></p>
 
       <div id="drinks">
         <h3>Cocktails</h3>
@@ -103,16 +109,17 @@
           <button class="drinkClick"><img src="images/drink40.jpg" alt="drink icon"> </button>
         </form>
       </div>
-
+      <br>
 
       <div>
         <h3>Time until next holiday</h3>
         <p class="disclaimer">There are more holidays than there are days in the year, so click here to find plenty of
           excuses to take the day off of whatever obligations and responsibilities that burden you</p>
         <p class='holiday'></p>
-        <button class="holidayClick" id="holidayClickButton"><img src="images/calandar40.jpg" alt="calandar icon"> </button>
+        <button class="holidayClick" id="holidayClickButton"><img src="images/calandar40.jpg" alt="calandar icon">
+        </button>
       </div>
-
+      <br>
       <div>
         <h3>Evil Insult Generator</h3>
         <p class="insults"></p>
@@ -141,7 +148,9 @@
   <!-- medium satisfaction -->
   <section class="result medSat hidden">
     <div class="lowTitle">
-      <p>Here's some helpful suggestions</p>
+      <h2>Suggestions</h2>
+      <p>Your yin/yang balance isn't thrown off as bad as you think. There's a lot you can do to get yourself back into
+        a harmonious state.</p>
       <button class="back">Readjust Levels</button>
     </div>
     <div class="suggestions">
@@ -151,7 +160,7 @@
       <p>Take a friend shopping or out to eat</p>
       <div id="readingImg"><img class="book" src="images/book.jpg" alt="reading a book"></div>
     </div>
-    
+
     <!-- Display funny/helpful resources for medium satisfaction -->
     <!-- Display restart -->
   </section>
@@ -160,6 +169,7 @@
   <section class="result highSat hidden">
     <div class="lowTitle">
       <h1 id="cool">You're almost Gandalf level cool</h1>
+      <p>Enjoy everything and choose happiness every day</p>
       <button class="back">Readjust Levels</button>
     </div>
     <div class="suggestions">
